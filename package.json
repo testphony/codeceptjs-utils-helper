@@ -1,6 +1,6 @@
 {
   "name": "@kronoslive/codeceptjs-utils-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CodeceptJS helper for ajv, timeouts, report html hacking",
   "dependencies": {
     "@kronoslive/codeceptjs-utils": "^0.0.1",

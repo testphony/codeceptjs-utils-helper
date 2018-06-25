@@ -10,7 +10,7 @@ const codeceptjsPath = path.resolve(global.codecept_dir, './node_modules/codecep
 const codeceptjs = requireg(codeceptjsPath);
 const config = codeceptjs.config.get();
 const { skipLongData } = require('@kronoslive/codeceptjs-utils');
-const { customSchemaWords } = require('@kronoslive/codeceptjs-utils');
+const { ajvSortCheck } = require('@kronoslive/codeceptjs-utils');
 const { walkSync } = require('@kronoslive/codeceptjs-utils');
 
 const ajv = new Ajv({ verbose: true, allErrors: config.mocha.reporterOptions['codeceptjs/lib/reporter/cli'].options.verbose, v5: true });
@@ -134,8 +134,8 @@ class Utils extends Helper {
   _loadJSONSchemas() {
     if (fs.existsSync(path.join(global.codecept_dir, './schemas/'))) {
       let files = walkSync(path.join(global.codecept_dir, './schemas/'));
-      Object.keys(customSchemaWords).forEach((keyword) => {
-        ajv.addKeyword(keyword, customSchemaWords[keyword]);
+      Object.keys(ajvSortCheck).forEach((keyword) => {
+        ajv.addKeyword(keyword, ajvSortCheck[keyword]);
       });
 
       files = files.filter(file => file.indexOf('.json') + 5 === file.length);
