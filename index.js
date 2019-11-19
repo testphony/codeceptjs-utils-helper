@@ -138,7 +138,7 @@ class Utils extends Helper {
         ajv.addKeyword(keyword, ajvSortCheck[keyword]);
       });
 
-      files = files.filter(file => file.indexOf('.json') + 5 === file.length);
+      files = files.filter((file) => file.indexOf('.json') + 5 === file.length);
       files.forEach((file) => {
         // eslint-disable-next-line global-require, import/no-dynamic-require
         ajv.addSchema(require(path.join(global.codecept_dir, `./schemas/${file}`)), file);
