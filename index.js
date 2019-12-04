@@ -13,7 +13,12 @@ const { skipLongData } = require('@kronoslive/codeceptjs-utils');
 const { ajvSortCheck } = require('@kronoslive/codeceptjs-utils');
 const { walkSync } = require('@kronoslive/codeceptjs-utils');
 
-const ajv = new Ajv({ verbose: true, allErrors: config.mocha.reporterOptions['codeceptjs/lib/reporter/cli'].options.verbose, v5: true });
+const allErrors = (config.mocha
+  && config.mocha.reporterOptions['codeceptjs/lib/reporter/cli']
+  && config.mocha.reporterOptions['codeceptjs/lib/reporter/cli'].options)
+  ? config.mocha.reporterOptions['codeceptjs/lib/reporter/cli'].options.verbose : false;
+
+const ajv = new Ajv({ verbose: true, allErrors, v5: true });
 require('ajv-merge-patch')(ajv);
 
 let mochawesome;
