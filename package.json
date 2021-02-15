@@ -1,17 +1,17 @@
 {
   "name": "@kronoslive/codeceptjs-utils-helper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CodeceptJS helper for ajv, timeouts, report html hacking",
   "dependencies": {
     "@kronoslive/codeceptjs-utils": "^0.0.2",
     "ajv-merge-patch": "^3.0.0",
     "ajv": "^5.5.1",
-    "requireg": "^0.1.8"
+    "requireg": "^0.2.2"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   },
   "main": "index.js",
   "scripts": {
