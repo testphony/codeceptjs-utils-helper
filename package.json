@@ -5,7 +5,7 @@
   "dependencies": {
     "@kronoslive/codeceptjs-utils": "^0.0.2",
     "ajv-merge-patch": "^3.0.0",
-    "ajv": "^5.5.1",
+    "ajv": "^6.12.3",
     "requireg": "^0.2.2"
   },
   "devDependencies": {
